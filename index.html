@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic</title>
+</head>
+
+<body>
+    <script>
+        // var date = new Date();
+        // switch (date.getDay()) {
+        //     case 0:
+        //         console.log('Sun');
+        //         break;
+        //     case 1:
+        //         console.log('Mon');
+        //         break;
+        //     case 2:
+        //         console.log('Tue');
+        //         break;
+        //     case 3:
+        //         console.log('Wed');
+        //         break;
+        //     default:
+        //         console.log(date.getDay());
+        // }
+
+
+        // var cars = ['Toyota','Honda','Nissan',[1,2,3]];
+        // console.log(cars[0]);
+        // console.log(cars.length);
+        // cars.push('BMW');
+        // console.log(cars.length);
+        // console.log(cars[3][0]);
+
+
+        // var cars = ['Toyota', 'Honda', 'Nissan'];
+        // for (i = 0; i <= cars.length - 1; i++) {
+        //     console.log(cars[i]);
+        // }
+        // var i = 0;
+        // while (i <= cars.length - 1) {
+        //     console.log(cars[i]);
+        //     i++;
+        // }
+        // i = 0;
+        // do {
+        //     console.log(cars[i]);
+        //     i++;
+        // } while (i <= cars.length - 1);
+
+
+        // console.log(factorial(2));
+        // function factorial(input) {
+        //     var result = input;
+        //     for (var i = result - 1; i >= 1; i--) {
+        //         result *= i;
+        //     }
+        //     return result;
+        // }
+
+
+        var user = {
+            username: 'timtan',
+            firstname: 'Pongtawan',
+            lastname: 'Kaenprom',
+            fullname: function () {
+                return this.firstname + ' ' + this.lastname;
+            },
+            testArg: function (arg) {
+                return arg;
+            }
+        };
+        console.log(user.firstname);
+        console.log(user.fullname());
+        console.log(user.username);
+        user.username = 'tantacle';
+        console.log(user.username);
+        console.log(user.testArg('AAA'));
+
+
+    </script>
+</body>
+
+</html>

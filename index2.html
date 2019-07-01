@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id='clock'></h1>
+    <input type="text" id="input" oninput="changeText()">
+    <h1 id="textShow"></h1>
+    <button onclick="changeColor()">Change color</button>
+    <script>
+        window.onload = function () {
+            refreshClock();
+        }
+        function refreshClock() {
+            setTimeout(function () {
+                var date = new Date();
+                var hour = date.getHours();
+                var min = date.getMinutes();
+                var sec = date.getSeconds();
+                if(hour < 10){
+                    hour = '0'+hour;
+                }
+                if(min < 10){
+                    min = '0'+min;
+                }
+                if(sec < 10){
+                    sec = '0'+sec;
+                }
+                var el = document.getElementById('clock');
+                el.innerHTML = hour + ':' + min + ':' + sec;
+                refreshClock();
+            }, 1000)
+        }
+        function changeText(){
+            var input = document.getElementById('input');
+            var text = document.getElementById('textShow');
+            text.innerHTML = input.value;
+        }
+        function changeColor(){
+            var el = document.getElementById('textShow');
+            el.style.color = 'red';
+        }
+
+    </script>
+</body>
+
+</html>
